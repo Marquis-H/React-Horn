@@ -11,8 +11,7 @@ export default class ReactHorn extends Component {
         const {url, text, callback, send} = this.props;
         if (send) {
             postRequest(url, {"text": text}, (response) => {
-                console.log(response);
-                callback({code: 0, message: response.ok})
+                callback({code: 0, message: 'success'})
             })
         }
     }

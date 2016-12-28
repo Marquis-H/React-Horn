@@ -32,7 +32,7 @@ class App extends Component {
                     <h2>ReactHorn Example</h2>
                 </div>
                 <ReactHorn
-                    url="https://integram.org/c9jHFCjB9bN"
+                    url="https://integram.org/xxxxxxx" //Horn Url
                     text="测试Horn"
                     callback={this.handleCallback}
                     send={isSend}/>

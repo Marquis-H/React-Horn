@@ -15,8 +15,9 @@ export function checkHttpStatus(response) {
 export function postRequest(api, data = {}, callback) {
     return fetch(api, {
         method: 'POST',
-        credentials: 'include',
         mode: 'no-cors',
         body: JSON.stringify(data)
-    }).then(checkHttpStatus).then(response => callback(response))
+    }).then(checkHttpStatus).then(response => callback(response)).catch((e) => {
+        callback({code: 1, message: e.message})
+    })
 }

@@ -19,7 +19,9 @@
   },
   "dependencies": {
     "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "react-dom": "^15.4.1",
+    "webpack": "latest",
+    "webpack-dev-server": "latest"
   },
   "scripts": {
     "start": "babel-node example/service.js",
