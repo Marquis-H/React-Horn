@@ -8,7 +8,7 @@ class App extends Component {
         this.state = {
             isSend: false
         };
-        this.handleCallback = this.handleCallback.bind();
+        this.handleCallback = this.handleCallback.bind(this);
     }
 
     handleButton() {
@@ -18,9 +18,13 @@ class App extends Component {
     }
 
     handleCallback(status) {
-        if (status.code == '0') {
-            alert(status.message);
-        }
+        //status.code\status.message
+        //success: status.code == 0
+        //error: status.code == 1
+        alert(status.message);
+        this.setState({
+            isSend: false
+        })
     }
 
     render() {
